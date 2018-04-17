@@ -17,10 +17,11 @@ def rss():
     for url in RSS_URLS:
         feeds.append(feedparser.parse(url))
 
-    for feed in feeds:
-        for post in feed['entries']:
-            return post
-    
+    #for feed in feeds:
+    #    for post in feed['entries']:
+    #        return post
+    return feeds
+
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(port))
