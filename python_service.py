@@ -19,7 +19,7 @@ def rss():
 
     for feed in feeds:
         for post in feed['entries']:
-            print post
+            return post
     
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
