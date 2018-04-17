@@ -12,7 +12,7 @@ def rss():
     
     res1 = urllib.urlopen(twitter)
     data1 = res1.read()
-    print data1
+    return data1
     
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
