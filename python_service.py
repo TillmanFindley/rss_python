@@ -10,14 +10,11 @@ app = Flask(__name__)
 @app.route('/trump-feed')
 def rss():  
     feeds = []
-    RSS = ['http://thehill.com/rss/syndicator/19110',
-                'http://thehill.com/taxonomy/term/1132/feed','http://thehill.com/taxonomy/term/1130/feed',
-                'http://thehill.com/taxonomy/term/1131/feed','http://thehill.com/taxonomy/term/1630/feed',
-                'http://thehill.com/taxonomy/term/1778/feed','http://thehill.com/rss/syndicator/19109']
-    for url in RSS_URLS:
-        res = urllib.urlopen(url)
-        data = res.read()
-        return data
+    RSS = 'http://thehill.com/rss/syndicator/19110'
+    
+    res = urllib.urlopen(RSS)
+    data = res.read()
+    return data
         
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
