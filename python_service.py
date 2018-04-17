@@ -2,7 +2,7 @@ import feedparser
 import pprint
 import re
 import os
-from flask import Flask, render_template, request, redirect
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
