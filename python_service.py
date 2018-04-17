@@ -7,7 +7,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/trump-feed')
 def rss():    
     feeds = []
     RSS_URLS = ['https://twitrss.me/twitter_user_to_rss/user=realDonaldTrump','http://thehill.com/rss/syndicator/19110',
