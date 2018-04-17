@@ -19,7 +19,8 @@ def rss():
         data = res.read()
         feeds.append(data)
     
-    return feeds
+    for i in feeds:
+        return i
         
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
