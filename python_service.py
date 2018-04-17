@@ -1,4 +1,4 @@
-import feedparser
+import urllib
 import os
 import time
 from flask import Flask, jsonify
@@ -12,7 +12,7 @@ def rss():
     RSS_URLS = 'https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump'
     res = urllib.urlopen(RSS_URLS)
     data = res.read()
-    return data
+    return str(data)
 
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
