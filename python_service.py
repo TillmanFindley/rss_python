@@ -16,7 +16,7 @@ def rss():
     for url in RSS_URLS:
         res = urllib.urlopen(url)
         data = res.read()
-        print data
+        return data
         
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
