@@ -3,7 +3,7 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  name: rss_python_eternaldev
-  host: rss_python_eternaldev
+  name: trump-feed-eternaldev
+  host: trump-feed-eternaldev
   disk_quota: 1024M
   buildpack: python_buildpack
