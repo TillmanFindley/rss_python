@@ -13,11 +13,6 @@ def rss():
     data1 = res1.read()
     return data1
 
-    RSS = 'http://abcnews.go.com/abcnews/mostreadstories'
-    res2 = urllib.urlopen(RSS)
-    data2 = res2.read()
-    return data2
-    
 port = os.getenv('PORT', '5000')
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(port))
